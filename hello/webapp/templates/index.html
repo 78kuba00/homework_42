@@ -1,0 +1,35 @@
+{% load static %}
+
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>42</title>
+    <link rel="stylesheet" href="{% static " css
+    /style.css" %}">
+</head>
+<body>
+<form action="/" method="post">
+    {% csrf_token %}
+
+    Enter first number : <input type="number" name="num1"/><br>
+    Enter second number : <input type="number" name="num2"/><br>
+    <div class="input-group">
+        <select class="form-select" id="inputGroupSelect04" aria-label="Example select with button addon" name="action">
+            <option selected>Choose...</option>
+            <option value="add">add</option>
+            <option value="subtract">subtract</option>
+            <option value="multiply">multiply</option>
+            <option value="divide">divide</option>
+        </select>
+        <input type="submit" value="Calculate">
+    </div>
+
+        Result : {{ result }}
+
+</form>
+</body>
+</html>
